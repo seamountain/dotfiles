@@ -1,0 +1,25 @@
+[user]
+# TODO
+  name =
+  email =
+
+[color]
+  status = auto
+  diff = auto
+  branche = auto
+
+[alias]
+  st = status
+  ci = commit
+  logg = log --graph --decorate --pretty=format:\"%ad [%cn] %h> %n %Cgreen%d%Creset %s %n\" --name-status
+  logs = log --graph --decorate --pretty=format:\"%ad [%cn] %h> %n %Cgreen%d%Creset %s %n\" --stat -p
+
+[core]
+  editor = /usr/bin/vim
+  excludesfile = /Users/sea_mountain/.gitignore_global
+[difftool "sourcetree"]
+  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+  path =
+[mergetool "sourcetree"]
+  cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+  trustExitCode = true

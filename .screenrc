@@ -1,0 +1,32 @@
+escape ^Gg
+startup_message off
+
+term xterm-256color
+
+defmonitor on
+defbce on
+termcapinfo xterm-256color 'is=^[r^[mJ^[H^[?7h^[?1;4;6l'
+
+sorendition "+rb .G"
+
+# changes the windowlist format to suit caption/hardstatus
+windowlist title  '%{u .g}Num Flags Title%=[0-9] select the number [movement] j,C-n:Down k,C-p:Up (C-)f:PageDown (C-)b:PageUp'
+windowlist string '%{.g}%3n %{.y}%f%09=%{dg} %t %='
+
+caption always "%{= .K}[%m/%d %02c]%014=%{= .K}%-w%50>%{= .W}%n %t%{-}%+w%-0< %="
+
+sorendition "= .w"
+
+bind s split
+bind v split -v
+bind g focus
+bind V version
+
+autodetach on
+
+bind r eval 'command -c resize'
+bind ^r eval 'command -c resize'
+bind < eval 'command -c resize'
+bind > eval 'command -c resize'
+bind -c resize < eval 'resize +1' 'command -c resize'
+bind -c resize > eval 'resize -1' 'command -c resize'
