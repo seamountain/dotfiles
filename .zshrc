@@ -96,7 +96,7 @@ alias ls="ls -G -a"
 autoload colors
 colors
 PROMPT="%{${fg[white]}%}[%n]%{${reset_color}%} %{${fg[blue]}%} %~ %{${reset_color}%}
- %{${fg[white]}%}%(!.#.$) %{${reset_color}%"
+%{${fg[white]}%}%(!.#.$) %{${reset_color}%"
 PROMPT2="%{${fg[blue]}%}%_> %{${reset_color}%}"
 SPROMPT="%{${fg[red]}%}correct: %R -> %r [nyae]? %{${reset_color}%}"
 RPROMPT="%{${fg[blue]}%}[%~]%{${reset_color}%}"
@@ -106,7 +106,6 @@ RPROMPT="%{${fg[blue]}%}[%~]%{${reset_color}%}"
 ## 変更有無表示
 autoload -Uz add-zsh-hook
 autoload -Uz colors
-colors
 autoload -Uz vcs_info
 
 zstyle ':vcs_info:*' enable git svn hg bzr
@@ -136,3 +135,9 @@ RPROMPT="%1(v|%F{green}%1v%f|)"
 # TODO: RVM
 
 # TODO: perlbrew
+#
+
+# zsh syntax-highlight
+if [ -f ~/.zsh/extentions/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
+  source ~/.zsh/extentions/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
