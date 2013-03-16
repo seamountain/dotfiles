@@ -38,6 +38,7 @@ Bundle 'Zenburn'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'tpope/vim-rails'
 Bundle 'jslint.vim'
+Bundle 'airblade/vim-gitgutter'
 
 "---------------------------------------------------------------------------
 " カラー設定:
