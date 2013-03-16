@@ -85,10 +85,8 @@ setopt list_packed
 ## 最後のスラッシュを自動的に削除しない
 setopt noautoremoveslash
 
-
-#### 以下自分で追加
-## rvm用PATH設定自動挿入
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+# PATHの追加
+PATH=$HOME/local/bin:$PATH
 
 alias ls="ls -G -a"
 
@@ -132,10 +130,8 @@ function _update_vcs_info_msg() {
 add-zsh-hook precmd _update_vcs_info_msg
 RPROMPT="%1(v|%F{green}%1v%f|)"
 
-# TODO: RVM
-
-# TODO: perlbrew
-#
+# rbenv
+eval "$(rbenv init -)"
 
 # zsh syntax-highlight
 if [ -f ~/.zsh/extentions/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
