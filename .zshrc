@@ -86,7 +86,8 @@ setopt list_packed
 setopt noautoremoveslash
 
 # PATHの追加
-PATH=$HOME/local/bin:$PATH
+# rbenv
+PATH=~/.rbenv/shims:$HOME/local/bin:/usr/local/share/npm/bin:$PATH
 
 alias ls="ls -G -a"
 
