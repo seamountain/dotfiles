@@ -38,6 +38,7 @@ set smartindent
 set expandtab
 set tabstop=2 shiftwidth=2 softtabstop=2 "インデント幅を2文字に
 
+set hlsearch
 set number
 set ruler
 set wrap
@@ -68,7 +69,7 @@ map <silent> sy :call YanktmpYank()<CR>
 map <silent> sp :call YanktmpPaste_p()<CR>
 map <silent> sP :call YanktmpPaste_P()<CR>
 
-"pasteモードトグル
+"paste mode toggle
 nnoremap <Space>p :<C-u>set paste!<CR>
 
 "iTerm2のショートカット変更により追加
