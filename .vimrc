@@ -50,14 +50,20 @@ filetype plugin on
 
 imap <C-j> <C-[>
 imap <C-k> <C-m>
-imap { {}
-imap [ []
-imap ( ()
+imap { {}<LEFT>
+imap [ []<LEFT>
+imap ( ()<LEFT>
 
 "Fix 'rontab: temp file must be edited in place', when edit crontab.
 set backupskip=/tmp/*,/private/tmp/*
 
 "set clipboard=unnamed,autoselect
+if stridx(tolower(system('uname')), 'darwin') >= 0 && !has('gui')
+  nnoremap <silent> <Space>y :.w !pbcopy<CR><CR>
+  vnoremap <silent> <Space>y :w !pbcopy<CR><CR>
+  nnoremap <silent> <Space>p :r !pbpaste<CR>
+  vnoremap <silent> <Space>p :r !pbpaste<CR>
+end
 
 set langmenu=ja_jp.utf-8
 source $VIMRUNTIME/delmenu.vim
@@ -87,18 +93,9 @@ endif
 
 nnoremap cl :close<CR>
 
-"----------------------------------------------------------------
-"unite.vim
-let g:unite_enable_start_insert = 1
-let g:unite_enable_split_vertically = 1
-if globpath(&rtp, 'plugin/unite.vim') != ''
-  nnoremap sc :<C-u>Unite colorscheme font<Cr>
-endif
-
 
 "surround.vim
 map <C-l> <Leader>c<space>
-
 
 "Lokaltog/vim-powerline
 set laststatus=2
@@ -106,9 +103,7 @@ set statusline=%f\ [%{&fenc==''?&enc:&fenc}][%{&ff}]%=%8l:%c%8P
 set list
 set listchars=tab:__,trail:_
 
-
 "neocomplcache
-"TODO
 let g:neocomplcache_enable_at_startup = 1
 
 if !exists('g:neocomplcache_keyword_patterns')
@@ -119,8 +114,12 @@ let g:neocomplcache_keyword_patterns['default'] = '\h\w*'
 imap <expr><C-k> neocomplcache#sources#snippets_complete#expandable() ? "\<Plug>(neocomplcache_snippets_expand)" : "\<C-n>"
 smap <C-k> <Plug>(neocomplcache_snippets_expand)
 
-
 "unite.vim
+let g:unite_enable_start_insert = 1
+let g:unite_enable_split_vertically = 1
+if globpath(&rtp, 'plugin/unite.vim') != ''
+  nnoremap sc :<C-u>Unite colorscheme font<Cr>
+endif
 " バッファ一覧
 nnoremap <silent> ,ub :<C-u>Unite buffer<CR>
 " ファイル一覧
@@ -133,8 +132,6 @@ nnoremap <silent> ,um :<C-u>Unite file_mru<CR>
 nnoremap <silent> ,uu :<C-u>Unite buffer file_mru<CR>
 " 全部乗せ
 nnoremap <silent> ,ua :<C-u>UniteWithBufferDir -buffer-name=files buffer file_mru bookmark file<CR>
-" 入力モードで開始する
-let g:unite_enable_start_insert=0
 " ESCキーを2回押すと終了する
 au FileType unite nnoremap <silent> <buffer> <ESC><ESC> q
 au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>q
@@ -152,3 +149,4 @@ let g:JSLintHighlightErrorLine = 1
 let $JS_CMD='node'
 hi clear SpellBad
 
+let g:Powerline_symbols = 'fancy'

@@ -88,8 +88,12 @@ setopt noautoremoveslash
 # PATHの追加
 # rbenv
 PATH=~/.rbenv/shims:$HOME/local/bin:/usr/local/share/npm/bin:$PATH
+# adb
+PATH=$HOME/src/adt-bundle-mac-x86_64-20130522/sdk/platform-tools:$PATH
 
 alias ls="ls -G -a"
+alias al='adb logcat -c | adb logcat -v time'
+alias alg='adb logcat -c | adb logcat -v time | grep -v D/SNFCCCS'
 
 ## プロンプトの設定
 autoload colors
