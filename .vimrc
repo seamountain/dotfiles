@@ -1,6 +1,7 @@
-"For Vundle
+"Clone https://github.com/gmarik/vundle to .vim/bundle at first
+set nocompatible
 filetype off
-set rtp+=~/.vim/vundle.git
+set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 Bundle 'unite.vim'
@@ -8,8 +9,10 @@ Bundle 'unite-colorscheme'
 Bundle 'yanktmp.vim'
 Bundle 'surround.vim'
 Bundle 'textobj-user'
+Bundle 'thinca/quickrun.vim'
+Bundle 'tyru/open-browser.vim'
+Bundle 'superbrothers/vim-quickrun-markdown-gfm'
 
-Bundle 'quickrun.vim'
 Bundle 'neocomplcache'
 Bundle 'The-NERD-Commenter'
 Bundle 'taglist.vim'
@@ -18,7 +21,7 @@ Bundle 'Source-Explorer-srcexpl.vim'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'Lokaltog/vim-powerline'
 
-Bundle 'ZenCoding.vim'
+Bundle 'mattn/emmet-vim'
 Bundle 'Haml'
 Bundle 'tpope/vim-rails'
 Bundle 'jslint.vim'
@@ -42,11 +45,6 @@ set hlsearch
 set number
 set ruler
 set wrap
-
-"For each filetypes
-filetype on
-filetype indent on
-filetype plugin on
 
 imap <C-j> <C-[>
 imap <C-k> <C-m>
@@ -142,11 +140,20 @@ au FileType unite inoremap <silent> <buffer> <expr> <C-j> unite#do_action('split
 au FileType unite nnoremap <silent> <buffer> <expr> <C-l> unite#do_action('vsplit')
 au FileType unite inoremap <silent> <buffer> <expr> <C-l> unite#do_action('vsplit')
 
+" vim-quickrun-markdown-gf
+let g:quickrun_config = {
+\   'markdown': {
+\     'type': 'markdown/gfm',
+\     'outputter': 'browser'
+\   }
+\ }
 
-" TODO: Have to install node
 " jslint.vim
 let g:JSLintHighlightErrorLine = 1
 let $JS_CMD='node'
 hi clear SpellBad
 
 let g:Powerline_symbols = 'fancy'
+
+"For each filetypes
+filetype plugin indent on
