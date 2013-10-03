@@ -55,13 +55,9 @@ imap ( ()<LEFT>
 "Fix 'rontab: temp file must be edited in place', when edit crontab.
 set backupskip=/tmp/*,/private/tmp/*
 
-"set clipboard=unnamed,autoselect
-if stridx(tolower(system('uname')), 'darwin') >= 0 && !has('gui')
-  nnoremap <silent> <Space>y :.w !pbcopy<CR><CR>
-  vnoremap <silent> <Space>y :w !pbcopy<CR><CR>
-  nnoremap <silent> <Space>p :r !pbpaste<CR>
-  vnoremap <silent> <Space>p :r !pbpaste<CR>
-end
+"Use clipboard
+"Check vim a clipboard option. vim --version | grep clipboard
+set clipboard=unnamed
 
 set langmenu=ja_jp.utf-8
 source $VIMRUNTIME/delmenu.vim
