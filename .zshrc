@@ -85,15 +85,18 @@ setopt list_packed
 ## 最後のスラッシュを自動的に削除しない
 setopt noautoremoveslash
 
-# PATHの追加
+# Add PATH
+export PATH=/usr/local/bin:$PATH
 # rbenv
-PATH=~/.rbenv/shims:$HOME/local/bin:/usr/local/share/npm/bin:$PATH
+export PATH=$PATH:~/.rbenv/shims:/usr/local/share/npm/bin
 # adb
-PATH=$HOME/src/adt-bundle-mac-x86_64-20130522/sdk/platform-tools:$PATH
+export PATH=$PATH:$HOME/src/adt-bundle-mac-x86_64-20130522/sdk/platform-tools
 
+alias vi="vim"
 alias ls="ls -G -a"
 alias al='adb logcat -c | adb logcat -v time'
 alias alg='adb logcat -c | adb logcat -v time | grep -v D/SNFCCCS'
+alias algl='adb logcat -c | adb logcat -v time | grep -v D/SNFCCCS 2>&1 | tee debug.log'
 
 ## プロンプトの設定
 autoload colors
