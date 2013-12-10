@@ -40,6 +40,10 @@ set encoding=utf-8
 set smartindent
 set expandtab
 set tabstop=2 shiftwidth=2 softtabstop=2 "インデント幅を2文字に
+" インデントのスペースが削除できるように
+" http://www.atmarkit.co.jp/ait/articles/1107/21/news115.html
+" http://vim.wikia.com/wiki/Backspace_and_delete_problems
+set backspace=2
 
 set hlsearch
 set number
@@ -57,7 +61,7 @@ set backupskip=/tmp/*,/private/tmp/*
 
 "Use clipboard
 "Check vim a clipboard option. vim --version | grep clipboard
-set clipboard=unnamed
+"set clipboard=unnamed
 
 set langmenu=ja_jp.utf-8
 source $VIMRUNTIME/delmenu.vim
