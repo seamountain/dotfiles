@@ -11,6 +11,9 @@
 [alias]
   st = status
   ci = commit -v
+  co = checkout
+  br = branch
+  df = diff
   logg = log --graph --decorate --pretty=format:\"%ad [%cn] %h> %n %Cgreen%d%Creset %s %n\" --name-status
   logs = log --graph --decorate --pretty=format:\"%ad [%cn] %h> %n %Cgreen%d%Creset %s %n\" --stat -p
 
