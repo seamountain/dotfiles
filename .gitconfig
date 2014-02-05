@@ -12,6 +12,7 @@
   st = status
   ci = commit -v
   co = checkout
+  cp = cherry-pick
   br = branch
   df = diff
   logg = log --graph --decorate --pretty=format:\"%ad [%cn] %h> %n %Cgreen%d%Creset %s %n\" --name-status
