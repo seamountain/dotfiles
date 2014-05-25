@@ -91,6 +91,8 @@ export PATH=/usr/local/bin:$PATH
 export PATH=$PATH:~/.rbenv/shims:/usr/local/share/npm/bin
 # adb
 export PATH=$PATH:$HOME/src/adt-bundle-mac-x86_64-20130522/sdk/platform-tools
+# ddms
+export PATH=$PATH:$HOME/src/adt-bundle-mac-x86_64-20130522/sdk/tools
 
 alias vi="vim"
 alias ls="ls -G -a"
