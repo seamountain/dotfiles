@@ -94,6 +94,9 @@ export PATH=$PATH:$HOME/src/adt-bundle-mac-x86_64-20130522/sdk/platform-tools
 # ddms
 export PATH=$PATH:$HOME/src/adt-bundle-mac-x86_64-20130522/sdk/tools
 
+# SDL2
+export LIBRARY_PATH="$LIBRARY_PATH:/usr/local/lib"
+
 alias vi="vim"
 alias ls="ls -G -a"
 alias al='adb logcat -c | adb logcat -v time'
