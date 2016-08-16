@@ -1,15 +1,15 @@
-"Clone https://github.com/gmarik/vundle to .vim/bundle at first
+" READ https://github.com/VundleVim/Vundle.vim/blob/master/README.md
 set nocompatible
 filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-Bundle 'unite.vim'
+Plugin 'VundleVim/Vundle.vim'
+Bundle 'Shougo/unite.vim'
 Bundle 'unite-colorscheme'
 Bundle 'yanktmp.vim'
 Bundle 'surround.vim'
 Bundle 'textobj-user'
-Bundle 'thinca/quickrun.vim'
 Bundle 'tyru/open-browser.vim'
 Bundle 'superbrothers/vim-quickrun-markdown-gfm'
 
@@ -30,6 +30,10 @@ Bundle 'wombat256.vim'
 Bundle 'molokai'
 Bundle 'railscasts'
 Bundle 'Zenburn'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
 
 colorscheme wombat256mod
 
