@@ -87,12 +87,10 @@ setopt noautoremoveslash
 
 # Add PATH
 export PATH=/usr/local/bin:$PATH
-# rbenv
-export PATH=$PATH:~/.rbenv/shims:/usr/local/share/npm/bin
 # adb
-export PATH=$PATH:$HOME/src/adt-bundle-mac-x86_64-20130522/sdk/platform-tools
+export PATH=$PATH:$HOME/src/android-sdk-macosx/platform-tools
 # ddms
-export PATH=$PATH:$HOME/src/adt-bundle-mac-x86_64-20130522/sdk/tools
+export PATH=$PATH:$HOME/src/android-sdk-macosx/tools
 
 # SDL2
 export LIBRARY_PATH="$LIBRARY_PATH:/usr/local/lib"
@@ -143,10 +141,13 @@ function _update_vcs_info_msg() {
 add-zsh-hook precmd _update_vcs_info_msg
 RPROMPT="%1(v|%F{green}%1v%f|)"
 
-# rbenv
-eval "$(rbenv init -)"
-
 # zsh syntax-highlight
 if [ -f ~/.zsh/extentions/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
   source ~/.zsh/extentions/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
+
+# rbenv
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
+alias ssh=~/bin/ssh-host-color
