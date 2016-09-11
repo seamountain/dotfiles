@@ -1,0 +1,7 @@
+#Sun Sep 11 12:01:18 JST 2016
+\!/=
+/instance/org.eclipse.ui.workbench/org.eclipse.ui.commands=<?xml version\="1.0" encoding\="UTF-8"?>\n<org.eclipse.ui.commands>\n<activeKeyConfiguration keyConfigurationId\="org.eclipse.ui.emacsAcceleratorConfiguration"/>\n<keyBinding commandId\="org.eclipse.ui.edit.text.contentAssist.proposals" contextId\="org.eclipse.ui.contexts.dialogAndWindow" keyConfigurationId\="org.eclipse.ui.emacsAcceleratorConfiguration" keySequence\="CTRL+R"/>\n<keyBinding contextId\="org.eclipse.ui.contexts.dialogAndWindow" keyConfigurationId\="org.eclipse.ui.defaultAcceleratorConfiguration" keySequence\="CTRL+SPACE"/>\n<keyBinding commandId\="org.eclipse.ui.edit.text.deletePrevious" contextId\="org.eclipse.ui.contexts.window" keyConfigurationId\="org.eclipse.ui.emacsAcceleratorConfiguration" keySequence\="CTRL+H"/>\n<keyBinding contextId\="org.eclipse.ui.textEditorScope" keyConfigurationId\="org.eclipse.ui.emacsAcceleratorConfiguration" keySequence\="CTRL+R"/>\n</org.eclipse.ui.commands>
+/instance/org.eclipse.ui/KEY_CONFIGURATION_ID=org.eclipse.ui.emacsAcceleratorConfiguration
+@org.eclipse.ui=3.108.0.v20160518-1929
+@org.eclipse.ui.workbench=3.108.0.v20160602-1232
+file_export_version=3.0
