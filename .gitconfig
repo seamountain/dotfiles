@@ -15,6 +15,7 @@
   cp = cherry-pick
   br = branch
   df = diff
+  ds = diff --staged
   logg = log --graph --decorate --pretty=format:\"%ad [%cn] %h> %n %Cgreen%d%Creset %s %n\" --name-status
   logs = log --graph --decorate --pretty=format:\"%ad [%cn] %h> %n %Cgreen%d%Creset %s %n\" --stat -p
 
